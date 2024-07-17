@@ -1,0 +1,218 @@
+.header {
+    background-color: #005D9A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.beranda {
+    margin-left: auto; /* Pushes the button to the far right */
+    color: black; /* Adjust color to contrast with background */
+    text-decoration: none; /* Remove underline from link */
+    margin-right: 20px;
+    padding: 10px 20px; /* Add some padding for better appearance */
+    background-color: white; /* Background color for the button */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: 1px solid transparent; /* Add transparent border for consistent sizing */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.beranda:hover{
+    background-color: #005D9A;
+    color: white;
+    border: solid 1px white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    background: white;
+    padding: 20px;
+    margin: 20px;;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.info-icon {
+    display: inline-block;
+    background-color: #737c86;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the icon */
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Arrow pointing down */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.info-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input.invalid, select.invalid {
+    border-color: red;
+}
+
+input.invalid ~ .error-message, select.invalid ~ .error-message {
+    display: block;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    margin-top: 10px;
+}
+.step:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #bec6cd;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dcdcdc;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+
+}
+.active {
+    background-color: #0d6efd;
+}
+.completed {
+    background-color: #0d6efd;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.stars {
+    display: flex;
+}
+
+.star {
+    font-size: 36px;
+    cursor: pointer;
+    color: #dcdcdc;
+    transition: color 0.3s;
+}
+.rating-scale{
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.starstar{
+    font-size: 36px;
+    color: #ffcc00;
+}
+
+.star:hover,
+.star.actived {
+    color: #ffcc00;
+}
