@@ -12,7 +12,7 @@
         $q4_value = $_POST['q4'];
         $q5_value = $_POST['q5'];
 
-        $stmt = $pdo->prepare("INSERT INTO evaluation(`nama`,`kemudahan`,`keramahan`,`efisiensi`,`kejelasan informasi`,`rekomendasi`) VALUES('$nama','$q1_value','$q2_value','$q3_value','$q4_value','$q5_value')");
+        $stmt = $pdo->prepare("INSERT INTO evaluation(`nama`,`kemudahan`,`keramahan`,`efisiensi`,`kejelasan_informasi`,`rekomendasi`) VALUES('$nama','$q1_value','$q2_value','$q3_value','$q4_value','$q5_value')");
         $stmt->execute();            
         $pdo = NULL;
         header("Location: finish.html");

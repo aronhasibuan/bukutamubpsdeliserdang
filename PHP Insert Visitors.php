@@ -17,7 +17,7 @@
         $pekerjaan = $_POST['job'];
         $namainstansi = $_POST['instansi'];
         $manfaatkunjungan = $_POST['goals'];
-        $tanggalberkunjung = date("d/m/Y");
+        $tanggalberkunjung = date("Y-m-d");
 
         $stmt = $pdo->prepare("INSERT INTO visitors(`nama`,`email`,`umur`,`nomorhandphone`,`jeniskelamin`,`pendidikan`,`pekerjaan`,`namainstansi`,`manfaatkunjungan`,`tanggalberkunjung`) VALUES('$nama','$email','$umur','$nomorhandphone','$jeniskelamin','$pendidikan','$pekerjaan','$namainstansi','$manfaatkunjungan','$tanggalberkunjung')");
         $stmt->execute();            
