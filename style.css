@@ -243,3 +243,13 @@ main {
 .button:hover {
     background-color: #003366;
 }
+
+
+@media (max-width: 767px) {
+    .rating-scale {
+      font-size: 12px; /* adjust font size for mobile */
+    }
+    .starstar {
+      font-size: 10px; /* adjust font size for mobile */
+    }
+  }
