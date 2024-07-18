@@ -254,6 +254,8 @@
                 </tbody>
             </table>
         </div>
+
+        <!-- Nanti lagi capek wkwkw -->
         <div class="table">
             <div class="table-title">Penilaian PST Deli Serdang</div>
             <table class="rating-table">
