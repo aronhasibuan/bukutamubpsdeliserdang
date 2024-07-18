@@ -226,7 +226,7 @@ main {
 }
 
 
-.button {
+.submit {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
@@ -240,6 +240,16 @@ main {
     transition: background-color 0.3s;
 }
 
-.button:hover {
+.submit:hover {
     background-color: #003366;
 }
+
+
+@media (max-width: 767px) {
+    .rating-scale {
+      font-size: 12px; /* adjust font size for mobile */
+    }
+    .starstar {
+      font-size: 10px; /* adjust font size for mobile */
+    }
+  }
