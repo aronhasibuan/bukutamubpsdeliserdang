@@ -31,7 +31,7 @@
             </span>
             <span>Sangat Puas</span>
         </div>
-        <form id="form-penilaian">
+        <form id="form-penilaian" action="PHP Insert Penilaian.php" method="POST">
             <div class="question">
                 <label for="q1">Seberapa puas Anda dengan kemudahan Prosedur/alur pelayanan yang ditetapkan PST di BPS Kabupaten Deli Serdang</label>
                 <div class="stars" data-question="1">
@@ -107,6 +107,11 @@
                     <span class="star" data-value="10">&#9733;</span>
                 </div>
             </div>
+            <input type="hidden" name="q1" id="q1" value="">
+            <input type="hidden" name="q2" id="q2" value="">
+            <input type="hidden" name="q3" id="q3" value="">
+            <input type="hidden" name="q4" id="q4" value="">
+            <input type="hidden" name="q5" id="q5" value="">
             <!-- <a href="finish.html" class="button">Submit</a> -->
             <!-- <button type="submit">Submit</button> -->
             <input type="submit" value="Submit" name="simpan" class="submit">
@@ -118,10 +123,17 @@
 
             stars.forEach(star => {
                 star.addEventListener('click', (e) => {
-                    const value = parseInt(star.getAttribute('data-value'));
-                    const question = star.parentElement.getAttribute('data-question');
+                    const value = parseInt(star.getAttribute('data-value')); // Ambil nilai dari data-value di bintang yang diklik
+                    const question = star.parentElement.getAttribute('data-question'); // Ambil nomor pertanyaan dari atribut data-question
+
+                    // Update nilai di elemen input hidden sesuai pertanyaan
+                    const input = document.getElementById(`q${question}`);
+                    if (input) {
+                        input.value = value; // Set nilai input hidden dengan nilai bintang yang diklik
+                    }
+
+                    // Visual feedback: tambahkan class 'actived' ke bintang-bintang yang sudah atau kurang dari nilai yang diklik
                     const starsForQuestion = document.querySelectorAll(`.stars[data-question="${question}"] .star`);
-                    
                     starsForQuestion.forEach(s => {
                         if (parseInt(s.getAttribute('data-value')) <= value) {
                             s.classList.add('actived');
