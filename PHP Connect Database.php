@@ -1,8 +1,8 @@
 <?php
-    $db_hostname = "localhost"; 
-    $db_database = "mhs_222111924";
-    $db_username = "mhs222111924";
-    $db_password = "Alipamoi584"; 
+    $db_hostname = "10.112.12.2"; 
+    $db_database = "bukutamubpsds";
+    $db_username = "root";
+    $db_password = ""; 
     $db_charset = "utf8mb4";
     $dsn = "mysql:host=$db_hostname;dbname=$db_database;charset=$db_charset";
     $opt = array(
