@@ -31,7 +31,7 @@
             </span>
             <span>Sangat Puas</span>
         </div>
-        <form id="form-penilaian">
+        <form id="form-penilaian" action="PHP Insert Penilaian.php" method="POST">
             <div class="question">
                 <label for="q1">Seberapa puas Anda dengan kemudahan Prosedur/alur pelayanan yang ditetapkan PST di BPS Kabupaten Deli Serdang</label>
                 <div class="stars" data-question="1">
@@ -107,10 +107,19 @@
                     <span class="star" data-value="10">&#9733;</span>
                 </div>
             </div>
-            <a href="finish.html" class="button">Submit</a>
+
+            <input type="hidden" name="q1" id="q1" value="">
+            <input type="hidden" name="q2" id="q2" value="">
+            <input type="hidden" name="q3" id="q3" value="">
+            <input type="hidden" name="q4" id="q4" value="">
+            <input type="hidden" name="q5" id="q5" value="">
+
+            <!-- <a href="finish.html" class="button">Submit</a> -->
             <!-- <button type="submit">Submit</button> -->
+            <input type="submit" value="Submit" name="simpan" class="submit">
         </form>
     </div>
+    <script src="script-star.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const stars = document.querySelectorAll('.star');

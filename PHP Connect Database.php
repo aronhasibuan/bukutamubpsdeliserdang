@@ -1,5 +1,5 @@
 <?php
-    $db_hostname = "10.112.12.2"; 
+    $db_hostname = "localhost"; 
     $db_database = "bukutamubpsds";
     $db_username = "root";
     $db_password = ""; 
