@@ -268,29 +268,29 @@
                 <tbody>
                     <?php
                         $conn = mysqli_connect("localhost", "root", "", "bukutamubpsds");
-                        $sql = "SELECT * FROM penilaian";
+                        $sql = "SELECT * FROM evaluation";
                         $result = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_assoc($result)) {
                    ?>
                     <tr>
                         <td>Kemudahan Prosedur/Alur Pelayanan</td>
-                        <td><?php echo $row['kriteria1'];?></td>
+                        <td><?php echo $row['kemudahan'];?></td>
                     </tr>
                     <tr>
                         <td>Keramahan dan Profesionalisme Staf</td>
-                        <td><?php echo $row['kriteria2'];?></td>
+                        <td><?php echo $row['keramahan'];?></td>
                     </tr>
                     <tr>
                         <td>Layanan PST Cepat dan Efisien</td>
-                        <td><?php echo $row['kriteria3'];?></td>
+                        <td><?php echo $row['efisiensi'];?></td>
                     </tr>
                     <tr>
                         <td>Kejelasan Informasi dan Bantuan yang Diberikan</td>
-                        <td><?php echo $row['kriteria4'];?></td>
+                        <td><?php echo $row['kejelasan_informasi'];?></td>
                     </tr>
                     <tr>
                         <td>Merekomendasikan Layanan PST</td>
-                        <td><?php echo $row['kriteria5'];?></td>
+                        <td><?php echo $row['rekomendasi'];?></td>
                     </tr>
                     <?php
                         }
