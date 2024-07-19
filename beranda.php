@@ -266,36 +266,47 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                        $conn = mysqli_connect("localhost", "root", "", "bukutamubpsds");
-                        $sql = "SELECT * FROM evaluation";
-                        $result = mysqli_query($conn, $sql);
-                        while ($row = mysqli_fetch_assoc($result)) {
-                   ?>
-                    <tr>
-                        <td>Kemudahan Prosedur/Alur Pelayanan</td>
-                        <td><?php echo $row['kemudahan'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Keramahan dan Profesionalisme Staf</td>
-                        <td><?php echo $row['keramahan'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Layanan PST Cepat dan Efisien</td>
-                        <td><?php echo $row['efisiensi'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Kejelasan Informasi dan Bantuan yang Diberikan</td>
-                        <td><?php echo $row['kejelasan_informasi'];?></td>
-                    </tr>
-                    <tr>
-                        <td>Merekomendasikan Layanan PST</td>
-                        <td><?php echo $row['rekomendasi'];?></td>
-                    </tr>
-                    <?php
-                        }
-                        mysqli_close($conn);
-                   ?>
+                <?php
+                    $conn = mysqli_connect("localhost", "root", "", "bukutamubpsds");
+                    $sql = "SELECT 
+                                AVG(kemudahan) AS rata_kemudahan,
+                                AVG(keramahan) AS rata_keramahan,
+                                AVG(efisiensi) AS rata_efisiensi,
+                                AVG(kejelasan_informasi) AS rata_kejelasan_informasi,
+                                AVG(rekomendasi) AS rata_rekomendasi
+                            FROM evaluation";
+                    $result = mysqli_query($conn, $sql);
+                    if ($result && mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                ?>
+                    <tbody>
+                        <tr>
+                            <td>Kemudahan Prosedur/Alur Pelayanan</td>
+                            <td><?php echo number_format($row['rata_kemudahan'], 2); ?></td>
+                        </tr>
+                        <tr>
+                            <td>Keramahan dan Profesionalisme Staf</td>
+                            <td><?php echo number_format($row['rata_keramahan'], 2); ?></td>
+                        </tr>
+                        <tr>
+                            <td>Layanan PST Cepat dan Efisien</td>
+                            <td><?php echo number_format($row['rata_efisiensi'], 2); ?></td>
+                        </tr>
+                        <tr>
+                            <td>Kejelasan Informasi dan Bantuan yang Diberikan</td>
+                            <td><?php echo number_format($row['rata_kejelasan_informasi'], 2); ?></td>
+                        </tr>
+                        <tr>
+                            <td>Merekomendasikan Layanan PST</td>
+                            <td><?php echo number_format($row['rata_rekomendasi'], 2); ?></td>
+                        </tr>
+                    </tbody>
+                <?php
+                    } else {
+                        echo "Tidak ada data evaluasi.";
+                    }
+                    mysqli_close($conn);
+                ?>
                 </tbody>
             </table>
         </div>
