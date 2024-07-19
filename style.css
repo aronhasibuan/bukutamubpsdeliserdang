@@ -297,3 +297,27 @@ main {
 .login-form a:hover {
     text-decoration: underline;
 }
+
+.back {
+    margin-left: auto; /* Pushes the button to the far right */
+    color: white; /* Adjust color to contrast with background */
+    text-decoration: none; /* Remove underline from link */
+    padding: 10px 20px; /* Add some padding for better appearance */
+    background-color: #005D9A; /* Background color for the button */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: 1px solid transparent; /* Add transparent border for consistent sizing */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.back:hover{
+    background-color: #004080;
+}
+
+.thank-you {
+    background-color: white;
+    padding: 20px;
+    max-width: 75%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; /* add this line to center the form */
+}
