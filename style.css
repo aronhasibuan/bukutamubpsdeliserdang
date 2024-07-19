@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 .beranda {
     margin-left: auto; /* Pushes the button to the far right */
@@ -245,12 +246,19 @@ main {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
     .rating-scale {
       font-size: 12px; /* adjust font size for mobile */
     }
     .starstar {
       font-size: 10px; /* adjust font size for mobile */
+    }
+    .logo {
+        width: 200px;
+        height: 45px;
+    }
+    .beranda{
+        padding: 5px 10px;
     }
   }
 .login-form {

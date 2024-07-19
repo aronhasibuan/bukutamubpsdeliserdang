@@ -108,13 +108,14 @@
                         var options = {
                             title: 'Jenis Pekerjaan',
                             legend: 'none',
-                            
+                            colors: ['#FFC107', '#8BC34A', '#4CAF50', '#03A9F4', '#9C27B0'] // add this line
                         };
                         var chart = new google.visualization.BarChart(document.getElementById('chart-2'));
                         chart.draw(data, options);
                     }
                 </script>
             </div>
+
             <!-- Bar Chart -->
             <div class="chart">
                 <div class="chart-title-3">Pendidikan</div>
@@ -132,15 +133,14 @@
                         var options = {
                             title: 'Pendidikan',
                             legend: 'none',
+                            colors: ['#9C27B0', '#4CAF50', '#8BC34A', '#FFC107', '#03A9F4'] // add this line
                         };
                         var chart = new google.visualization.BarChart(document.getElementById('chart-3'));
                         chart.draw(data, options);
                     }
                 </script>
             </div>
-        </div>
-        <div class="charts">
-            <!-- Satu Baris ada 3 chart -->
+
             <!-- Bar Chart -->
             <div class="chart">
                 <div class="chart-title-4">Kelompok Umur</div>
@@ -158,12 +158,14 @@
                         var options = {
                             title: 'Kelompok Umur',
                             legend: 'none',
+                            colors: ['#03A9F4', '#9C27B0', '#4CAF50', '#8BC34A', '#FFC107'] // add this line
                         };
                         var chart = new google.visualization.BarChart(document.getElementById('chart-4'));
                         chart.draw(data, options);
                     }
                 </script>
             </div>
+
             <!-- Bar Chart -->
             <div class="chart">
                 <div class="chart-title-5">Tujuan</div>
@@ -181,6 +183,7 @@
                         var options = {
                             title: 'Tujuan',
                             legend: 'none',
+                            colors: ['#8BC34A', '#4CAF50', '#03A9F4', '#9C27B0', '#FFC107'] // add this line
                         };
                         var chart = new google.visualization.BarChart(document.getElementById('chart-5'));
                         chart.draw(data, options);
