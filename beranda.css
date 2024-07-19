@@ -90,3 +90,11 @@ th {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
+/* Add this media query to make charts responsive on mobile devices */
+@media (max-width: 700px) {
+    .chart {
+      width: 100%; /* Make charts full-width on small screens */
+      margin: 10px; /* Add margin top and bottom to separate charts */
+      display: block;
+    }
+  }
