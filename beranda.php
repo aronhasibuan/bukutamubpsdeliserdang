@@ -62,7 +62,7 @@
 <body>
     <header id="header" class="header">
         <img class="logo" src="img/logobpsds.png" alt="BPS Kabupaten Deli Serdang" height="90" width="400">
-        <a class="beranda" href="/index.html">Logout</a>
+        <a class="beranda" href="index.html">Logout</a>
     </header>
     <div class="content">
         <div class="title">Statistik Pelayanan PST BPS Kabupaten Deli Serdang</div>
